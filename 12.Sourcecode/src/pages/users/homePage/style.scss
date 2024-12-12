@@ -1,63 +1,160 @@
-$primary-color: #00bcd4;
-$background-color: #e0f7fa;
+@use "sass:map";
+@import "style/pages/theme";
 
-// body {
-//   font-family: Arial, sans-serif;
-//   background-color: $background-color;
-//   color: #333;
-//   margin: 0;
-//   padding: 0;
-// }
+.container_carousel_slider{
+  max-width: 1200px !important;
+  margin-top: 30px !important;
 
-.homepage {
-  text-align: center;
-  padding: 20px;
+  .carousel_slider{
 
-  h1 {
-    margin-bottom: 20px;
-  }
+    .carousel_slider_item{
+      height: 300px;
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      border-radius: 5px;
 
-  .card-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+      p{
+        position: absolute;
+        left: 5%;
+        bottom: 20px;
+        text-align: center;
+        font-size: 18px;
+        color: map.get($theme-color,"normal-text");
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 12px 0 10px;
+        width: 270px;
+        cursor: pointer;
 
-    .card {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 15px;
-      width: 200px;
-
-      img {
-        width: 100%;
-        border-radius: 8px;
-      }
-
-      h2 {
-        font-size: 1.5em;
-        margin: 10px 0;
-      }
-
-      .see-more {
-        text-decoration: none;
-        color: $primary-color;
-        font-weight: bold;
+        &:hover{
+          background: rgb(237, 237, 237);
+        }
       }
     }
+    .react-multi-carousel-item:not(:first-child):not(:last-child){
+      margin-left: 5px;
+      margin-right: 5px;
+    }
   }
+}
+.list{
+  margin-top: 50px;
 
-  .popular-shop {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 20px;
-    background-color: $primary-color;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+  .section-title{
+    margin-bottom: 50px;
+    text-align: center;
 
-    &:hover {
-      background-color: darken($primary-color, 10%);
+    h2{
+      position: relative;
+    }
+
+    h2:after{
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      right: 0;
+      height: 4px;
+      width: 80px;
+      background: map.get($theme-color,"main");
+      content: "";
+      margin: 0 auto;
+
+    }
+
+  }
+  .react-tabs{
+    ul{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+
+    }
+    li{
+      list-style: none;
+      font-size: 18px;
+      color: map.get($theme-color,"normal-text");
+      display: inline-block;
+      margin-right: 25px;
+      position: relative;
+      cursor: pointer;
+    }
+  }
+  .List_item{
+    margin-bottom: 50px;
+
+    &:hover{
+      .List_item_pic_hover{
+        bottom: -15% !important;
+      }
+    }
+
+    .List_item_pic{
+      height: 270px;
+      position: relative;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+      background-position: center;
+
+      .List_item_pic_hover{
+        position: absolute;
+        left: 0;
+        bottom: -40%;
+        width: 100%;
+        text-align: center;
+        transition: all 0.5s;
+        
+        li{
+          list-style: none;
+          display: inline-block;
+          margin-right: 10px;
+
+          &:hover{
+            svg{
+              background: #7fad7f;
+              border-color: #7fad7f;
+              color: #ffffff;
+              transform: rotate(360deg) ip !important;
+            }
+          }
+          svg{
+            padding: 10px;
+            height: 20px;
+            width: 20px;
+            border: 1px solid #ebebeb;
+            background: #ffffff;
+            color: #565555;
+            transition: all 0.3s;
+            border-radius: 50%;
+
+          }
+        }
+      }
+    }
+    .List_item_text{
+      text-align: center;
+
+      h6{
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 400;
+
+        a {
+          color: black;
+          text-decoration: none;
+
+        }
+      }
+      h5{
+        color: map.get($theme-color,"normal-text");
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 10px;
+      }
     }
   }
 }

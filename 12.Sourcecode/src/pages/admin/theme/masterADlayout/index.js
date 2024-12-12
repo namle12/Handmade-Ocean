@@ -1,5 +1,5 @@
 import { memo } from "react";
-import Footer from "../../../commom/footer.js";
+import Footer from "../../../commom/footer/index.js";
 import { ROUTERS } from "utils/routers.js";
 import { useLocation } from "react-router-dom";
 

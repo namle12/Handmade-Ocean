@@ -97,9 +97,9 @@ function RegisterPage() {
         {error && <p style={{ color: 'red' }}>{error}</p>}
         {success && <p style={{ color: 'green' }}>{success}</p>}
         <div className="button_register">
-          <button type="submit">Register</button>
+          <button type="submit" className='button'>Register</button>
           {/* viết sau  */}
-          <button type="button" onClick={() => navigate(ROUTERS.ADMIN.LOGIN)}>Login</button>
+          <button type="button" className='button' onClick={() => navigate(ROUTERS.ADMIN.LOGIN)}>Login</button>
         </div>
       </form>
     </div>

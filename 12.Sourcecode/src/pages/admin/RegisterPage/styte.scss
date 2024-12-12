@@ -1,48 +1,49 @@
 .App {
   text-align: center;
   margin-top: 100px;
-}
 
-.form_register {
-  display: inline-block;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-}
 
-div {
-  margin-bottom: 15px;
-}
+  .form_register {
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
+  div {
+    margin-bottom: 15px;
+  }
 
-.input_register {
-  width: 200px;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
 
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+  .input_register {
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 
-button:hover {
-  background-color: #0056b3;
-}
-
-.button_register {
-  display: flex;
-  gap: 15px; /* Khoảng cách giữa các nút */
-  justify-content: center; /* Căn giữa các nút */
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .button_register {
+    display: flex;
+    gap: 15px; /* Khoảng cách giữa các nút */
+    justify-content: center; /* Căn giữa các nút */
+    .button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
 }

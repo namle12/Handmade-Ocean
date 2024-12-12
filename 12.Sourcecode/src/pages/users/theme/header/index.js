@@ -1,6 +1,6 @@
 import { memo, useState } from "react";
 import "./styte.scss";
-import {AiOutlineFacebook, AiOutlineUser, AiOutlineMail } from "react-icons/ai";
+import {AiOutlineFacebook, AiOutlineUser, AiOutlineMail, AiOutlineMenu, AiOutlinePhone } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { formatter } from "utils/fomater";
 import Handmade from "./Handmade.png";
@@ -10,6 +10,7 @@ import { ROUTERS } from "utils/routers";
 
 const Header = () => {  
     const navigate = useNavigate();
+    const [isshowproduct, Setshowproduct ] = useState(true);
     const [menus, ] = useState([
         {
             name: "Trang Chủ",
@@ -116,14 +117,57 @@ const Header = () => {
                 
             </div>
             <div className="container">
-            <div className="row">
-                    <div className="hero_search_container">
+                <div className="row hero_product_container">
+                    <div className="col-lg-3 hero_product">
+                        <div className="hero_product_all" 
+                        onClick={() => Setshowproduct(!isshowproduct)}>
+                            <AiOutlineMenu/>
+                            Danh sách sản phẩm
+                        </div>
+                             <ul className={isshowproduct ? "" : "hidden"}>
+                                <li>
+                                    <Link to={"#"}>Len</Link>
+                                </li>
+                                <li>
+                                    <Link to={"#"}>Gốm</Link>
+                                </li>
+                                <li>
+                                    <Link to={"#"}>Tranh sơn mài</Link>
+                                </li>
+                                <li>
+                                    <Link to={"#"}>Nón lá</Link>
+                                </li>
+                            </ul>
+                    </div>
+                    <div className="col-lg-9 hero_search_container">
                         <div className="hero_search">
                             <div className="hero_search_form">
                                 <form>
-                                    <input type="text" placeholder=""/>
+                                    <input type="text" placeholder="Bạn đang tìm gì"/>
                                     <button type="submit" className="site_bt">Search</button>
                                 </form>
+                            </div>
+                            <div className="hero_search_phone">
+                                <div className="hero_search_phone_icon">
+                                   <AiOutlinePhone/>
+                                </div>
+                                <div className="hero_search_phone_text">
+                                     <p>0905550823</p>
+                                    <span>Hổ trợ khách hàng</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="hero_item">
+                            <div className="hero_text">
+                                <span>Sản phẩm chất lượng</span>
+                                <h2>
+                                    Mẫu mã <br/>
+                                    đa dạng
+                                </h2>
+                                <p>Miễn phí giao hàng tận nơi</p>
+                                <Link to="" className="primary-btn">
+                                    Mua ngay
+                                </Link>
                             </div>
                         </div>
                     </div>
