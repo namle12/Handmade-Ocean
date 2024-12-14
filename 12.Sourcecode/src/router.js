@@ -6,6 +6,7 @@ import ProfilePage from "./pages/users/profilePage";
 import MasterADlayout from "pages/admin/theme/masterADlayout";
 import LoginAdPage from"./pages/admin/LoginPage";
 import RegisterPage from"./pages/admin/RegisterPage";
+import ProductListPage from "pages/users/productListPage";
 
 const rederUserRouter = () =>{
     const UserRouter = [
@@ -16,7 +17,11 @@ const rederUserRouter = () =>{
         {
             path: ROUTERS.USER.PROFILE,
             Component: <ProfilePage/>,
-        },   
+        },
+        {
+            path: ROUTERS.USER.PRODUCT,
+            Component: <ProductListPage/>,
+        },    
     ];
     return (
         <MasterLayout>

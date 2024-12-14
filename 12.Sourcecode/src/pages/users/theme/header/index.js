@@ -22,7 +22,7 @@ const Header = () => {
         },
         {
             name: "Sản Phẩm",
-            path: " ",
+            path: ROUTERS.USER.PRODUCT,
             isShowSubmenu : false,
             child: [
                 {

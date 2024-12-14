@@ -2,7 +2,7 @@ export const ADMIN_PATH ="/quan-tri";
 
 export const ROUTERS ={
     USER:{
-        HOME:"",
+        HOME:"/home",
         PROFILE:"profile",
         PRODUCT:"/product",
     },

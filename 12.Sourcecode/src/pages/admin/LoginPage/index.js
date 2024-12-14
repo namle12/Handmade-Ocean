@@ -14,7 +14,8 @@ function LoginAdPage() {
     
     // Kiểm tra thông tin đăng nhập
     if (email === 'user@example.com' && password === 'password') {
-      alert('Login successful!');
+      // alert('Login successful!');
+      navigate(ROUTERS.USER.HOME);
     } else {
       setError('Invalid email or password');
 
